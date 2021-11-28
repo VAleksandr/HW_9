@@ -49,3 +49,46 @@ const removeItem = (arr, num) => {
 }
 
 console.log(removeItem(newArr, 1));
+
+// 3
+
+const arrayA = [1, 6, 6, 1, 1, 1, 8, 5, 5, 3, 4, 5, 2, 1, 2, 2 ,1];
+
+const countIdentic2 = array => {
+let x = 1;
+let y = 0;
+const array2 = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array.includes(array[i], x)) {
+      if (!array2.includes(array[i])) {
+        array2.push(array[i]);
+        y++;
+      }
+    } else {
+      if (!array2.includes(array[i])) {
+        array2.push(array[i]);
+      }
+    }
+    x++
+  }
+  return array2;
+}
+
+console.log(countIdentic2(arrayA));
+
+// 2
+
+const countIdentic3 = array => {
+  let x = 1;
+  let y = 0;
+  for (let i = 0; i < array.length; i++) {
+  if (array.includes(array[i], x)) {
+    y++;
+    }
+  x++
+  }
+  return y;
+}
+
+  console.log('repeating elements: ' + countIdentic3(arrayA));
